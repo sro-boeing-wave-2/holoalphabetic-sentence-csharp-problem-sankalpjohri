@@ -11,8 +11,7 @@ namespace HoloalphabeticSentence
         public static bool IsHoloalphabeticSentence(string input, string alphabets = "abcdefghijklmnopqrstuvwxyz")
         {
             HashSet<char> inputCharSet = new HashSet<char>();
-            foreach (char c in input)
-            {
+            foreach (char c in input) {
                 if (Regex.IsMatch(Char.ToString(c), @"^[A-Za-z]+"))
                 {
                     inputCharSet.Add(Char.ToLower(c));
