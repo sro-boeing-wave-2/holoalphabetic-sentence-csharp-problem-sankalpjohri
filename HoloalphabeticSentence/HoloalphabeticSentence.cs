@@ -13,11 +13,7 @@ namespace HoloalphabeticSentence
             if (!String.IsNullOrWhiteSpace(input) && !String.IsNullOrWhiteSpace(alphabets))
             {
                 input = input.ToLower();
-                var charactersNotPresent = alphabets.Where(c => !input.Contains(c));
-                if (charactersNotPresent.Count() == 0)
-                {
-                    return true;
-                }
+                return alphabets.All(ch => input.Contains(ch));
             }
             return false;
         }
